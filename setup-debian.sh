@@ -1,6 +1,6 @@
 #!/bin/bash
 
-    function set_repository {
+function set_repository {
     rm -f /etc/apt/sources.list
 
     cat > /etc/apt/sources.list <<END
