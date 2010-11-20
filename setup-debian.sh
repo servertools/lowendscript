@@ -1,5 +1,16 @@
 #!/bin/bash
 
+    function set_repository {
+    rm -f /etc/apt/sources.list
+
+    cat > /etc/apt/sources.list <<END
+deb http://ftp.us.debian.org/debian/ lenny main contrib non-free
+deb http://security.debian.org/ lenny/updates main contrib non-free
+deb http://volatile.debian.org/debian-volatile lenny/volatile main contrib non-free
+END
+    apt-get -y update
+}
+
 function check_install {
     if [ -z "`which "$1" 2>/dev/null`" ]
     then
