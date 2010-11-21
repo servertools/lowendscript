@@ -11,14 +11,12 @@ END
     apt-get -y update
 }
 
-function install_webmin{
-    #install webmin dependencies
+function install_webmin {
+    # Install webmin dependencies
     apt-get -y install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl libapt-pkg-perl apt-show-versions
-    wait
-    #download and install webmin
+    # Download and install webmin
     cd /tmp
     wget http://prdownloads.sourceforge.net/webadmin/webmin_1.520_all.deb
-    wait
     dpkg --install webmin_1.520_all.deb
 }
 
