@@ -407,6 +407,12 @@ nginx)
 php)
     install_php
     ;;
+webmin)
+    install_webmin
+    ;;
+usrepo)
+    set_repository
+    ;;
 system)
     remove_unneeded
     update_upgrade
