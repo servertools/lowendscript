@@ -11,6 +11,17 @@ END
     apt-get -y update
 }
 
+function install_webmin{
+    #install webmin dependencies
+    apt-get -y install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl libapt-pkg-perl apt-show-versions
+    wait
+    #download and install webmin
+    cd /tmp
+    wget http://prdownloads.sourceforge.net/webadmin/webmin_1.520_all.deb
+    wait
+    dpkg --install webmin_1.520_all.deb
+}
+
 function check_install {
     if [ -z "`which "$1" 2>/dev/null`" ]
     then
