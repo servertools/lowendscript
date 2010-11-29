@@ -426,7 +426,7 @@ wordpress)
 *)
     echo 'Usage:' `basename $0` '[option]'
     echo 'Available option:'
-    for option in system exim4 mysql nginx php wordpress
+    for option in system exim4 mysql nginx php usrepo wordpress webmin
     do
         echo '  -' $option
     done
